@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		909249152D96FF7E0083C9CB /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909249132D96FF7E0083C9CB /* ProductEntity+CoreDataClass.swift */; };
+		909249162D96FF7E0083C9CB /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909249142D96FF7E0083C9CB /* Product+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		909033492D96FCF7009C331C /* A2_Jessica_101445909_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A2_Jessica_101445909_.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		909249132D96FF7E0083C9CB /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		909249142D96FF7E0083C9CB /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,6 +52,8 @@
 		909033402D96FCF7009C331C = {
 			isa = PBXGroup;
 			children = (
+				909249132D96FF7E0083C9CB /* ProductEntity+CoreDataClass.swift */,
+				909249142D96FF7E0083C9CB /* Product+CoreDataProperties.swift */,
 				9090334B2D96FCF7009C331C /* A2_Jessica_101445909_ */,
 				9090334A2D96FCF7009C331C /* Products */,
 			);
@@ -132,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909249152D96FF7E0083C9CB /* ProductEntity+CoreDataClass.swift in Sources */,
+				909249162D96FF7E0083C9CB /* Product+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +156,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MSUWD239SA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = A2_Jessica_101445909_/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -172,6 +184,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MSUWD239SA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = A2_Jessica_101445909_/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
