@@ -20,6 +20,7 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
 
+    }
     // MARK: - Properties
 
     var products: [ProductEntity] = []

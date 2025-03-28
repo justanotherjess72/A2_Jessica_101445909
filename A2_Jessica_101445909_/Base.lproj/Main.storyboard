@@ -226,6 +226,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="rNC-m4-vv9">
+                                <rect key="frame" x="54" y="486" width="285" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provider" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ryh-Fv-xV3">
                                 <rect key="frame" x="54" y="557" width="285" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -234,16 +241,21 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asa-hg-Pw9">
-                                <rect key="frame" x="136" y="714" width="122" height="36"/>
+                                <rect key="frame" x="145" y="666" width="107" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Add Product">
+                                        <fragment content="Add ">
                                             <attributes>
                                                 <font key="NSFont" size="18" name="Optima-Regular"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Snack">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Optima-Regular"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -252,23 +264,38 @@
                                     <action selector="saveButtonTapped:" destination="LMd-vL-BoF" eventType="touchUpInside" id="Q6u-9R-4rW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="rNC-m4-vv9">
-                                <rect key="frame" x="54" y="486" width="285" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlH-sw-3Fz">
+                                <rect key="frame" x="158" y="753" width="79" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Cancel">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Optima-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="LMd-vL-BoF" eventType="touchUpInside" id="SU5-fv-HZY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="avC-6t-hzX"/>
                         <color key="backgroundColor" red="1" green="0.79527331739999996" blue="0.90863513659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="0.79527331739999996" blue="0.90863513659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="Asa-hg-Pw9" id="WWe-L4-5Gz"/>
+                        <outlet property="cancelButton" destination="HlH-sw-3Fz" id="M2e-WF-1o1"/>
                         <outlet property="descriptionField" destination="eIv-4m-Qh7" id="01z-am-c4T"/>
                         <outlet property="nameField" destination="e6Q-F3-YdC" id="hw1-gB-hc0"/>
                         <outlet property="priceField" destination="rNC-m4-vv9" id="1Fh-fJ-6fv"/>
                         <outlet property="providerField" destination="Ryh-Fv-xV3" id="Elp-FB-SkS"/>
+                        <outlet property="screenTitleLabel" destination="GVT-6s-Gue" id="RPQ-Em-Ehv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpw-nI-f0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
