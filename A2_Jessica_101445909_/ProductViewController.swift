@@ -92,6 +92,10 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         currentIndex = 0
         showProduct(at: currentIndex)
     }
+    
+    @IBAction func viewAllTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "showSnackList", sender: self)
+    }
 
     func styleUI() {
         view.backgroundColor = UIColor.systemPink.withAlphaComponent(0.1)
