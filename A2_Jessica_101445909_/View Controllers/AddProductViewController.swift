@@ -33,27 +33,26 @@ class AddProductViewController: UIViewController {
 
         // Title label
         screenTitleLabel.text = "Add Snack"
-        screenTitleLabel.font = UIFont(name: "AvenirNext-Bold", size: 30)
+        screenTitleLabel.font = UIFont(name: "Optima", size: 36)
         screenTitleLabel.textColor = .darkGray
         screenTitleLabel.textAlignment = .center
 
         // Input field styling
-        let inputFont = UIFont(name: "AvenirNext-Regular", size: 16)
-        [nameField, descriptionField, priceField, providerField].forEach {
-            $0?.font = inputFont
-            $0?.backgroundColor = UIColor.white
-            $0?.layer.cornerRadius = 8
-            $0?.layer.borderWidth = 1
-            $0?.layer.borderColor = UIColor.systemGray5.cgColor
-            $0?.setLeftPaddingPoints(10)
+        let inputFont = UIFont(name: "Optima", size: 18)
+        ([nameField, descriptionField, priceField, providerField] as [UITextField]).forEach {
+            $0.backgroundColor = UIColor.white
+            $0.layer.cornerRadius = 8
+            $0.layer.borderWidth = 1
+            $0.layer.borderColor = UIColor.systemGray5.cgColor
         }
+
 
         // Button styling
         [addButton, cancelButton].forEach {
-            $0?.layer.cornerRadius = 10
-            $0?.backgroundColor = UIColor.systemPink
-            $0?.setTitleColor(.white, for: .normal)
-            $0?.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 16)
+            $0.layer.cornerRadius = 10
+            $0.backgroundColor = UIColor.systemPink
+            $0.setTitleColor(.white, for: .normal)
+            $0.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 16)
         }
     }
 

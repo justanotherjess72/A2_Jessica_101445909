@@ -5,6 +5,7 @@
 //  Created by jessica lee on 2025-03-28.
 //
 
+
 import UIKit
 
 class ProductViewController: UIViewController, UISearchBarDelegate {
@@ -20,7 +21,6 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
 
-    }
     // MARK: - Properties
 
     var products: [ProductEntity] = []
@@ -44,7 +44,7 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         showProduct(at: currentIndex)
     }
 
-    // UI Setup
+    // MARK: - UI Setup
 
     func setupUI() {
         view.backgroundColor = UIColor.systemPink.withAlphaComponent(0.05)
@@ -56,27 +56,27 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         screenTitleLabel.textAlignment = .center
 
         // Style labels
-        let infoFont = UIFont(name: "AvenirNext-Regular", size: 18)
+        let infoFont = UIFont(name: "Optima", size: 18)
         [nameLabel, descriptionLabel, priceLabel, providerLabel].forEach {
-            $0?.textColor = .darkGray
-            $0?.font = infoFont
-            $0?.textAlignment = .center
+            $0.textColor = .darkGray
+            $0.font = infoFont
+            $0.textAlignment = .center
         }
 
         // Style buttons
         [nextButton, previousButton].forEach {
-            $0?.backgroundColor = UIColor.systemPink
-            $0?.setTitleColor(.white, for: .normal)
-            $0?.layer.cornerRadius = 10
-            $0?.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 16)
+            $0.backgroundColor = UIColor.systemPink
+            $0.setTitleColor(.white, for: .normal)
+            $0.layer.cornerRadius = 10
+            $0.titleLabel?.font = UIFont(name: "Optima", size: 16)
         }
 
         // Style search bar
         searchBar.searchTextField.backgroundColor = UIColor.white
-        searchBar.searchTextField.font = UIFont(name: "AvenirNext-Regular", size: 16)
+        searchBar.searchTextField.font = UIFont(name: "Optima", size: 16)
     }
 
-    // Product Display
+    // MARK: - Product Display
 
     func showProduct(at index: Int) {
         let list = isFiltering() ? filteredProducts : products
@@ -103,7 +103,7 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         return !(searchBar.text?.isEmpty ?? true)
     }
 
-    // IBActions
+    // MARK: - IBActions
 
     @IBAction func nextTapped(_ sender: UIButton) {
         let list = isFiltering() ? filteredProducts : products
@@ -120,7 +120,7 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         }
     }
 
-    // SearchBar Delegate
+    // MARK: - UISearchBar Delegate
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
@@ -135,4 +135,3 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         showProduct(at: currentIndex)
     }
 }
-
