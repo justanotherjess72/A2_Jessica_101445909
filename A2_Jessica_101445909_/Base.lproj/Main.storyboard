@@ -182,6 +182,7 @@
                         <outlet property="previousButton" destination="Nkp-90-25b" id="Mhb-Ul-pwD"/>
                         <outlet property="priceLabel" destination="NKi-wP-rBV" id="ugA-EZ-t6P"/>
                         <outlet property="providerLabel" destination="V61-VW-9if" id="wCg-jJ-oue"/>
+                        <outlet property="screenTitleLabel" destination="4uw-58-sdl" id="StF-eq-hjQ"/>
                         <outlet property="searchBar" destination="2wz-rK-qkp" id="MMQ-pS-dt3"/>
                     </connections>
                 </viewController>
@@ -197,15 +198,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="eIv-4m-Qh7">
-                                <rect key="frame" x="54" y="423" width="285" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVT-6s-Gue">
+                                <rect key="frame" x="97" y="164" width="199" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Add A Snack">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Name" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="e6Q-F3-YdC">
+                                <rect key="frame" x="54" y="353" width="285" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="rNC-m4-vv9">
-                                <rect key="frame" x="54" y="493" width="285" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="eIv-4m-Qh7">
+                                <rect key="frame" x="54" y="418" width="285" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -237,8 +252,8 @@
                                     <action selector="saveButtonTapped:" destination="LMd-vL-BoF" eventType="touchUpInside" id="Q6u-9R-4rW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Name" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="e6Q-F3-YdC">
-                                <rect key="frame" x="54" y="353" width="285" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="rNC-m4-vv9">
+                                <rect key="frame" x="54" y="486" width="285" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

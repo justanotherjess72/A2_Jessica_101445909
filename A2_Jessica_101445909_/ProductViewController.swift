@@ -119,7 +119,7 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         }
     }
 
-    // MARK: - SearchBar Delegate
+    // SearchBar Delegate
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {

@@ -9,15 +9,55 @@ import UIKit
 
 class AddProductViewController: UIViewController {
 
+    // IBOutlets
+
+    @IBOutlet weak var screenTitleLabel: UILabel!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var descriptionField: UITextField!
     @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var providerField: UITextField!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+
+    // Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.systemPink.withAlphaComponent(0.05)
+        setupUI()
     }
+
+    // UI Styling
+
+    func setupUI() {
+        view.backgroundColor = UIColor.systemPink.withAlphaComponent(0.05)
+
+        // Title label
+        screenTitleLabel.text = "Add Snack"
+        screenTitleLabel.font = UIFont(name: "AvenirNext-Bold", size: 30)
+        screenTitleLabel.textColor = .darkGray
+        screenTitleLabel.textAlignment = .center
+
+        // Input field styling
+        let inputFont = UIFont(name: "AvenirNext-Regular", size: 16)
+        [nameField, descriptionField, priceField, providerField].forEach {
+            $0?.font = inputFont
+            $0?.backgroundColor = UIColor.white
+            $0?.layer.cornerRadius = 8
+            $0?.layer.borderWidth = 1
+            $0?.layer.borderColor = UIColor.systemGray5.cgColor
+            $0?.setLeftPaddingPoints(10)
+        }
+
+        // Button styling
+        [addButton, cancelButton].forEach {
+            $0?.layer.cornerRadius = 10
+            $0?.backgroundColor = UIColor.systemPink
+            $0?.setTitleColor(.white, for: .normal)
+            $0?.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 16)
+        }
+    }
+
+    // Actions
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         guard
@@ -39,21 +79,18 @@ class AddProductViewController: UIViewController {
         )
 
         showAlert("Snack added!") {
-            self.clearFields()
+            self.dismiss(animated: true)
         }
+    }
+
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true)
     }
 
     func showAlert(_ message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in completion?() })
         present(alert, animated: true)
-    }
-
-    func clearFields() {
-        nameField.text = ""
-        descriptionField.text = ""
-        priceField.text = ""
-        providerField.text = ""
     }
 }
 
