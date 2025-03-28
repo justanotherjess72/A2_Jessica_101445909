@@ -81,6 +81,10 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         currentIndex = 0
         showProduct(at: currentIndex)
     }
+    
+    @IBAction func addProductTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "showAddProduct", sender: self)
+    }
 
     func styleUI() {
         view.backgroundColor = UIColor.systemPink.withAlphaComponent(0.1)
