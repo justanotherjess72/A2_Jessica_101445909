@@ -37,16 +37,6 @@ class AddProductViewController: UIViewController {
         screenTitleLabel.textColor = .darkGray
         screenTitleLabel.textAlignment = .center
 
-        // Input field styling
-        let inputFont = UIFont(name: "Optima", size: 18)
-        ([nameField, descriptionField, priceField, providerField] as [UITextField]).forEach {
-            $0.backgroundColor = UIColor.white
-            $0.layer.cornerRadius = 8
-            $0.layer.borderWidth = 1
-            $0.layer.borderColor = UIColor.systemGray5.cgColor
-        }
-
-
         // Button styling
         [addButton, cancelButton].forEach {
             $0.layer.cornerRadius = 10

@@ -134,4 +134,12 @@ class ProductViewController: UIViewController, UISearchBarDelegate {
         currentIndex = 0
         showProduct(at: currentIndex)
     }
+    
+    @IBAction func addSnackTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "showAddSnack", sender: self)
+    }
+
+    @IBAction func viewAllSnacksTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "showSnackList", sender: self)
+    }
 }
