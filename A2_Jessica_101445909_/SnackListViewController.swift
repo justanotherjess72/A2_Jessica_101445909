@@ -7,23 +7,37 @@
 
 import UIKit
 
-class SnackListViewController: UIViewController {
+class SnackListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var tableView: UITableView!
+    var snacks: [ProductEntity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        snacks = ProductManager.shared.fetchProducts()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        snacks = ProductManager.shared.fetchProducts()
+        tableView.reloadData()
     }
-    */
 
+    // MARK: - TableView DataSource
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return snacks.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let snack = snacks[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SnackCell", for: indexPath)
+        var config = cell.defaultContentConfiguration()
+        config.text = snack.name
+        config.secondaryText = snack.productDescription
+        cell.contentConfiguration = config
+        return cell
+    }
 }
